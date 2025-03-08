@@ -27,11 +27,7 @@ C4Context
   Person(teacher, "Teacher", "Manages class schedules and attendance")
   Person(admin, "Administrator", "Oversees system operations")
   System(campusSystem, "Smart Campus Management System", "Handles attendance, timetables, and notifications")
-  student --> campusSystem
-  teacher --> campusSystem
-  admin --> campusSystem
-  
-  UpdateElementStyle(student, $fontColor="red",$bgColor="grey", $borderColor="red"))
+
 
 
 
@@ -50,29 +46,19 @@ C4Container
     Container(api, "Backend API", "Node.js & Express", "Handles business logic")
     ContainerDb(database, "Database", "PostgreSQL", "Stores user data")
   }
-  student --> webApp
-  teacher --> webApp
-  admin --> webApp
-  webApp --> api
-  mobileApp --> api
-  api --> database
+  
 ```
 
 ### 3.3 Component Diagram
 ```mermaid
 C4Component
-  Container(api, "Backend API", "Node.js & Express") {
+  Container(api, "Backend API", "Node.js & Express")
     Component(authService, "Authentication Service", "Manages user authentication")
     Component(attendanceService, "Attendance Service", "Handles student check-ins")
     Component(notificationService, "Notification Service", "Sends real-time alerts")
     Component(timetableService, "Timetable Service", "Manages class schedules")
-  }
-  webApp --> api
-  mobileApp --> api
-  api --> authService
-  api --> attendanceService
-  api --> notificationService
-  api --> timetableService
+ 
+ 
 ```
 
 ## 4. Conclusion

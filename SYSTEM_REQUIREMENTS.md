@@ -14,3 +14,19 @@
 | FR8 | The system shall support secure login using OAuth 2.0 authentication. | Login attempts must be logged and allow multi-factor authentication. |
 | FR9 | The system shall provide an analytics dashboard for university management. | Dashboard should show trends, attendance patterns, and student engagement. |
 | FR10 | The system shall integrate with existing university databases. | Student data should sync automatically without manual intervention. |
+
+---
+
+## 2. Non-Functional Requirements
+
+| Category | Requirement |
+|----------|------------|
+| **Usability** | The interface shall comply with WCAG 2.1 accessibility standards for readability and navigation. |
+| **Deployability** | The system shall be deployable on both Windows and Linux servers. |
+| **Maintainability** | The system documentation shall include an API guide for future integrations. |
+| **Scalability** | The system shall support at least 1,000 concurrent users during peak hours. |
+| **Security** | All sensitive user data shall be encrypted using AES-256. |
+| **Performance** | Attendance check-in should be processed within 2 seconds. |
+| **Availability** | The system shall guarantee 99.9% uptime with failover support. |
+| **Data Integrity** | All records shall have automatic backup every 24 hours. |
+

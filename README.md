@@ -50,3 +50,4 @@ The **Smart Campus Management System** is designed to streamline and automate va
   - Clear contract for operations on different entities.
   - Encourages **DRY** (Don't Repeat Yourself) coding practices across persistence layers.
 
+## Added a Workflow

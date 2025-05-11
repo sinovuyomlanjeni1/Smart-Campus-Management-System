@@ -1,4 +1,4 @@
-name: CI - Test Pipeline
+name: CI/CD - Test and Release Pipeline
 
 on:
   push:
@@ -8,6 +8,23 @@ on:
 
 jobs:
   test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Java
+        uses: actions/setup-java@v3
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+
+      - name: Build and test
+        run: mvn clean verify
+
+  release:
+    needs: test
+    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
 
     steps:
@@ -20,5 +37,12 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
 
-      - name: Build and test with Maven
-        run: mvn clean verify
+      - name: Build JAR
+        run: mvn clean package
+
+      - name: Upload JAR Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: smart-campus-app
+          path: target/*.jar
+

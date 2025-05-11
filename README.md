@@ -67,3 +67,30 @@ To run all unit and integration tests:
 # OR
 mvn clean test
 
+## ✅ Pull Request Blocking Tests Setup
+
+To show that **tests must pass before merging:**
+
+1. Push a branch with a failing test (e.g., assert `1 == 2`)
+2. Open a PR to `main`
+3. Wait for GitHub Actions to run
+4. You'll see ❌ “Some checks were not successful” → **Merge is disabled**
+5. Screenshot this and submit
+
+---
+
+### 📸 Deliverables
+
+| Deliverable                            | How to Get It |
+|----------------------------------------|----------------|
+| ✅ `README.md`                         | Use the example above |
+| 📸 PR with failed tests blocking merge | Create a fake failing test and PR |
+| 📸 Artifacts on `main` merge           | Use Actions → check `.jar` file |
+| 📸 Swagger UI (optional)               | Go to `/swagger-ui.html` |
+
+---
+
+
+
+
+

@@ -51,3 +51,19 @@ The **Smart Campus Management System** is designed to streamline and automate va
   - Encourages **DRY** (Don't Repeat Yourself) coding practices across persistence layers.
 
 ## Added a Workflow
+
+# 📚 Smart Campus Management System
+
+This is a Spring Boot-based system for managing campus resources, users, and activity workflows.
+
+---
+
+## 🧪 Running Tests Locally
+
+To run all unit and integration tests:
+
+```bash
+./mvnw clean test
+# OR
+mvn clean test
+

@@ -78,7 +78,7 @@ To show that **tests must pass before merging:**
 5. Screenshot this and submit
 
 ---
-
+```
 ### 📸 Deliverables
 
 | Deliverable                            | How to Get It |
@@ -87,8 +87,24 @@ To show that **tests must pass before merging:**
 | 📸 PR with failed tests blocking merge | Create a fake failing test and PR |
 | 📸 Artifacts on `main` merge           | Use Actions → check `.jar` file |
 | 📸 Swagger UI (optional)               | Go to `/swagger-ui.html` |
-
+```
 ---
+```
+### 🛠 Getting Started
+
+1. Clone the repo
+2. Build with Maven
+3. Run locally with Spring Boot
+
+## 🌱 Features for Contribution
+
+| Feature                  | Status     | Contribution Tag     |
+|--------------------------|------------|-----------------------|
+| User Role Management     | 🚧 Planned | `feature-request`     |
+| Swagger Screenshot Docs  | ✅ Done    | `good-first-issue`    |
+| Unit Tests for Services  | 🛠 Partial | `good-first-issue`    |
+| Redis Caching            | 🚧 Planned | `feature-request`     |
+
 
 
 
